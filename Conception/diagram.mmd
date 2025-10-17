@@ -1,0 +1,67 @@
+graph TD
+    %% ===== NAVIGATION BAR =====
+    subgraph NAVBAR [Navbar Navigation]
+        A[Home]
+        B[About]
+        C[Skills]
+        D[Projects]
+        E[Contact]
+    end
+
+    %% ===== PAGE CONNECTIONS =====
+    A -.-> A1[Home Page]
+    B -.-> B1[About Page]
+    C -.-> C1[Skills Page]
+    D -.-> D1[Projects Page]
+    E -.-> E1[Contact Page]
+
+    %% ===== HOME PAGE SECTIONS =====
+    subgraph HOME_PAGE [Home Page Sections]
+        A1 --> H1[About Section: Biography / Experience Overview]
+        A1 --> H2[Skills Preview: Technical & Soft Skills]
+        A1 --> H3[CTA: View Projects]
+        H3 -.-> D1
+    end
+
+    %% ===== ABOUT PAGE =====
+    subgraph ABOUT_PAGE [About Page Details]
+        B1 --> B2[Biography / Experience Details]
+    end
+
+    %% ===== SKILLS PAGE =====
+    subgraph SKILLS_PAGE [Skills Page Details]
+        C1 --> C2[Technical Skills]
+        C1 --> C3[Soft Skills]
+    end
+
+    %% ===== PROJECTS PAGE =====
+    subgraph PROJECTS_PAGE [Projects Page Details]
+        D1 --> D2[Project Portfolio + GitHub Links]
+        D1 --> D3[Highlighted Projects]
+    end
+
+    %% ===== CONTACT PAGE =====
+    subgraph CONTACT_PAGE [Contact Page Flow]
+        E1 --> E2[Contact Form]
+        E2 --> E3[Form Submitted]
+        E3 --> E4[Thank You / Success Message]
+    end
+
+    %% ===== SPACING ENHANCEMENT VIA DUMMY NODES =====
+    dummy1[ ]
+    dummy2[ ]
+    dummy3[ ]
+    dummy4[ ]
+    dummy5[ ]
+    dummy6[ ]
+
+    NAVBAR --> dummy1
+    dummy1 --> HOME_PAGE
+    HOME_PAGE --> dummy2
+    dummy2 --> ABOUT_PAGE
+    ABOUT_PAGE --> dummy3
+    dummy3 --> SKILLS_PAGE
+    SKILLS_PAGE --> dummy4
+    dummy4 --> PROJECTS_PAGE
+    PROJECTS_PAGE --> dummy5
+    dummy5 --> CONTACT_PAGE
