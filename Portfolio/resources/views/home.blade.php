@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Home')
+
 @section('content')
 <!-- Hero Section -->
 <section class="min-h-screen flex items-center bg-gray-900">
