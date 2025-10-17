@@ -20,4 +20,7 @@ class PortfolioController extends Controller
 
         return view('home', ['profile' => $profile]);
     }
+
+    // tells Laravel to render the Blade view file located at resources/views/home.blade.php
+    // passes data to the view
 }
