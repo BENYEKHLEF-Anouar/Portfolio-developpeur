@@ -1,0 +1,73 @@
+classDiagram
+    %% ===========================
+    %% Core Entities (Domain Model)
+    %% ===========================
+
+    class Developer {
+        +string name
+        +string title
+        +string bio
+        +string email
+        +string location
+        +list<Skill> skills
+        +list<Project> projects
+        +getProfile() ServiceData
+    }
+
+    class Skill {
+        +string name
+        +string level
+        +string category
+    }
+
+    class Project {
+        +int id
+        +string title
+        +string description
+        +string technologies
+        +string github_url
+        +string image
+        +getDetails() ServiceData
+    }
+
+    %% ===========================
+    %% Services Layer
+    %% ===========================
+    class DeveloperService {
+        +getDeveloperProfile() Developer
+        +getSkills() list<Skill>
+    }
+
+    class ProjectService {
+        +getAllProjects() list<Project>
+        +getProjectById(id: int) Project
+    }
+
+    %% ===========================
+    %% Controllers Layer
+    %% ===========================
+    class HomeController {
+        +index()
+    }
+
+    class ProjectController {
+        +index()
+        +show(id: int)
+    }
+
+    class AboutController {
+        +index()
+    }
+
+    %% ===========================
+    %% Relationships
+    %% ===========================
+    Developer "1" --> "many" Skill : has
+    Developer "1" --> "many" Project : owns
+
+    DeveloperService --> Developer : provides data
+    ProjectService --> Project : provides data
+
+    HomeController --> DeveloperService : uses
+    ProjectController --> ProjectService : uses
+    AboutController --> DeveloperService : uses

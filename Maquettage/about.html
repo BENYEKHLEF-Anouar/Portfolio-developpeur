@@ -10,40 +10,112 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom Skill Tag Variants */
+        .skill-tag {
+            transition: all 0.2s ease-in-out;
+        }
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .tag-html {
+            background: linear-gradient(135deg, rgba(227, 76, 38, 0.2), rgba(241, 101, 41, 0.2));
+            border: 1px solid rgba(241, 101, 41, 0.3);
+            color: #fdbA74;
+        }
+        .tag-css {
+            background: linear-gradient(135deg, rgba(38, 77, 228, 0.2), rgba(21, 114, 182, 0.2));
+            border: 1px solid rgba(21, 114, 182, 0.3);
+            color: #93c5fd;
+        }
+        .tag-js {
+            background: linear-gradient(135deg, rgba(240, 219, 79, 0.2), rgba(247, 223, 30, 0.2));
+            border: 1px solid rgba(247, 223, 30, 0.3);
+            color: #fde047;
+        }
+        .tag-php {
+            background: linear-gradient(135deg, rgba(119, 123, 179, 0.2), rgba(139, 147, 192, 0.2));
+            border: 1px solid rgba(139, 147, 192, 0.3);
+            color: #c4b5fd;
+        }
+        .tag-sql {
+            background: linear-gradient(135deg, rgba(0, 117, 192, 0.2), rgba(228, 161, 62, 0.2));
+            border: 1px solid rgba(0, 117, 192, 0.3);
+            color: #67e8f9;
+        }
+        .tag-laravel {
+            background: linear-gradient(135deg, rgba(255, 45, 32, 0.2), rgba(249, 102, 94, 0.2));
+            border: 1px solid rgba(255, 45, 32, 0.3);
+            color: #fca5a5;
+        }
+        .tag-react {
+            background: linear-gradient(135deg, rgba(97, 218, 251, 0.2), rgba(61, 133, 198, 0.2));
+            border: 1px solid rgba(97, 218, 251, 0.3);
+            color: #7dd3fc;
+        }
+        .tag-tailwind {
+             background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.2));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: #7dd3fc;
+        }
+        .tag-bootstrap {
+            background: linear-gradient(135deg, rgba(111, 66, 193, 0.2), rgba(130, 80, 200, 0.2));
+            border: 1px solid rgba(111, 66, 193, 0.3);
+            color: #d8b4fe;
+        }
+        .tag-git {
+            background: linear-gradient(135deg, rgba(240, 80, 50, 0.2), rgba(221, 68, 43, 0.2));
+            border: 1px solid rgba(240, 80, 50, 0.3);
+            color: #fdba74;
+        }
+        .tag-figma {
+            background: linear-gradient(135deg, rgba(162, 89, 255, 0.2), rgba(242, 78, 62, 0.2));
+            border: 1px solid rgba(162, 89, 255, 0.3);
+            color: #f9a8d4;
+        }
+        .tag-generic {
+            background: linear-gradient(135deg, rgba(107, 114, 128, 0.2), rgba(75, 85, 99, 0.2));
+            border: 1px solid rgba(107, 114, 128, 0.3);
+            color: #d1d5db;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-200 antialiased">
+<body class="bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-gray-100 antialiased">
     <!-- Navigation -->
-    <nav class="bg-gray-900/80 border-b border-gray-800 fixed w-full top-0 z-50 backdrop-blur-sm shadow-md">
+    <nav class="fixed w-full top-0 z-50 bg-gray-950/80 backdrop-blur-lg border-b border-white/10 shadow-lg" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-sky-400 to-sky-500 bg-clip-text text-transparent">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
                     AB
                 </a>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-300 hover:text-sky-400 font-medium transition duration-300">Home</a>
-                    <a href="projects.html" class="text-gray-300 hover:text-sky-400 font-medium transition duration-300">Projects</a>
-                    <a href="#skills" class="text-gray-300 hover:text-sky-400 font-medium transition duration-300">Skills</a>
-                    <a href="about.html" class="text-gray-100 nav-link-active font-medium transition duration-300">About</a>
-                    <a href="contact.html" class="text-gray-300 hover:text-sky-400 font-medium transition duration-300">Contact</a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="nav-link px-4 py-2 text-gray-300 hover:text-cyan-400 font-medium transition-colors duration-300">Home</a>
+                    <a href="projects.html" class="nav-link px-4 py-2 text-gray-300 hover:text-cyan-400 font-medium transition-colors duration-300">Projects</a>
+                    <a href="about.html#skills" class="nav-link px-4 py-2 text-gray-300 hover:text-cyan-400 font-medium transition-colors duration-300">Skills</a>
+                    <a href="about.html" class="nav-link active px-4 py-2 text-gray-300 hover:text-cyan-400 font-medium transition-colors duration-300">About</a>
+                    <a href="contact.html" class="ml-4 px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105">Contact</a>
                 </div>
-                <div class="md:hidden">
-                    <button class="text-gray-300 hover:text-sky-400" id="mobile-menu-button" aria-label="Open mobile menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </button>
-                </div>
+                <button class="md:hidden text-gray-300 hover:text-cyan-400 transition-colors" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="pt-16">
+    <main class="pt-20">
         <!-- Header Section -->
-        <section class="py-24 bg-gray-900/50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section class="py-24 relative overflow-hidden">
+            <div class="absolute inset-0">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/20 rounded-full filter blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <h1 class="text-5xl md:text-6xl font-bold">
-                    <span class="bg-gradient-to-r from-sky-400 to-sky-500 bg-clip-text text-transparent">About Me</span>
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">About Me</span>
                 </h1>
-                <p class="text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-400 mt-4 max-w-3xl mx-auto">
                     A developer dedicated to creating exceptional and purposeful web experiences.
                 </p>
             </div>
@@ -54,11 +126,11 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center mb-24">
                     <div class="flex justify-center lg:justify-start">
-                        <img src="https://t4.ftcdn.net/jpg/05/50/45/65/360_F_550456541_mMBkyPx1G6XtqPYrT8mG12O8Uz5XBTCZ.jpg" alt="Anouar BENYEKHLEF, a web developer, smiling confidently" class="rounded-2xl shadow-2xl w-80 h-80 object-cover">
+                        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ78C6mSb-AbO2yhoDdb9Hfpwxf-9yUe_i4n8sGzr8zAMI_Ztz3s6OiF4U7_Ks_px3K08S-kyto76dhVWYejfdjAZtbrmFARBMy5nnRyA" alt="Anouar BENYEKHLEF, a web developer, smiling confidently" class="rounded-2xl shadow-2xl w-80 h-80 object-cover border border-white/10">
                     </div>
                     <div class="lg:col-span-2">
-                        <h2 class="text-3xl font-bold mb-6 text-sky-400">Hello, I'm Anouar BENYEKHLEF</h2>
-                        <div class="space-y-4 text-lg text-gray-300 leading-relaxed">
+                        <h2 class="text-3xl font-bold mb-6 text-cyan-400">Hello, I'm Anouar BENYEKHLEF</h2>
+                        <div class="space-y-4 text-lg text-gray-400 leading-relaxed">
                             <p>I'm a passionate web developer based in Tangier, Morocco, specializing in creating elegant and functional web applications. With a strong foundation in both frontend and backend technologies, I bring ideas to life through clean code and thoughtful design.</p>
                             <p>My journey in web development is driven by a fascination for how things work. I continuously hone my skills in PHP, Laravel, JavaScript, and modern CSS frameworks, always staying current with industry trends to build maintainable and scalable applications. I am a detail-oriented problem-solver who thrives in collaborative environments.</p>
                             <p>When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I am a fast learner, committed to continuous improvement.</p>
@@ -69,27 +141,40 @@
                 <!-- Skills Section -->
                 <div class="mb-24" id="skills">
                     <div class="text-center mb-16">
-                        <h2 class="text-4xl font-bold"><span class="bg-gradient-to-r from-sky-400 to-sky-500 bg-clip-text text-transparent">My Skills</span></h2>
+                        <h2 class="text-4xl font-bold"><span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">My Skills</span></h2>
                         <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">A look at the technologies, languages, and tools I use to bring projects to life.</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-gray-800/50 rounded-xl p-8 border border-gray-800">
-                            <h3 class="text-2xl font-bold mb-6 text-sky-400">Languages & Tools</h3>
+                        <div class="glass-card rounded-2xl p-8 border border-cyan-600">
+                            <h3 class="text-2xl font-bold mb-6 text-cyan-400">Languages & Tools</h3>
                             <div class="flex flex-wrap gap-3">
-                                <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">PHP</span><span class="skill-tag">SQL</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-html">HTML</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-css">CSS</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-js">JavaScript</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-php">PHP</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-sql">SQL</span>
                             </div>
                         </div>
-                        <div class="bg-gray-800/50 rounded-xl p-8 border border-gray-800">
-                            <h3 class="text-2xl font-bold mb-6 text-sky-400">Frameworks</h3>
+                        <div class="glass-card rounded-2xl p-8 border border-cyan-600">
+                            <h3 class="text-2xl font-bold mb-6 text-cyan-400">Frameworks</h3>
                             <div class="flex flex-wrap gap-3">
-                               <span class="skill-tag">Laravel</span><span class="skill-tag">React</span><span class="skill-tag">React Native</span><span class="skill-tag">Bootstrap</span><span class="skill-tag">Tailwind</span>
+                               <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-laravel">Laravel</span>
+                               <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-react">React</span>
+                               <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-react">React Native</span>
+                               <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-bootstrap">Bootstrap</span>
+                               <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-tailwind">Tailwind</span>
                             </div>
                         </div>
                     </div>
-                     <div class="bg-gray-800/50 rounded-xl p-8 border border-gray-800 mt-8">
-                        <h3 class="text-2xl font-bold mb-6 text-center text-sky-400">Other Skills</h3>
+                     <div class="glass-card rounded-2xl p-8 mt-8 border border-cyan-600">
+                        <h3 class="text-2xl font-bold mb-6 text-center text-cyan-400">Other Skills</h3>
                         <div class="flex flex-wrap justify-center gap-4">
-                            <span class="skill-tag">Git & GitHub</span><span class="skill-tag">Figma</span><span class="skill-tag">Responsive Design</span><span class="skill-tag">API Utilization</span><span class="skill-tag">Debugging</span><span class="skill-tag">Team Collaboration</span>
+                            <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-git">Git & GitHub</span>
+                            <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-figma">Figma</span>
+                            <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-generic">Responsive Design</span>
+                            <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-generic">API Utilization</span>
+                            <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-generic">Debugging</span>
+                            <span class="skill-tag px-3 py-1 rounded-full text-xs font-medium tag-generic">Team Collaboration</span>
                         </div>
                     </div>
                 </div>
@@ -97,37 +182,43 @@
                 <!-- Experience Timeline -->
                 <div>
                     <div class="text-center mb-16">
-                        <h2 class="text-4xl font-bold"><span class="bg-gradient-to-r from-sky-400 to-sky-500 bg-clip-text text-transparent">My Journey</span></h2>
+                        <h2 class="text-4xl font-bold"><span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">My Journey</span></h2>
                         <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">A timeline of my professional growth and key milestones.</p>
                     </div>
                     <div class="space-y-8 max-w-3xl mx-auto">
-                        <div class="bg-gray-800/50 rounded-xl p-8 border border-gray-800 hover:border-sky-500 transition duration-300">
-                            <div class="flex items-start space-x-6">
-                                <div class="flex-shrink-0 w-16 h-16 bg-sky-500/10 rounded-xl flex items-center justify-center"><svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg></div>
+                        <div class="glass-card rounded-xl p-8 hover:border-cyan-500 transition duration-300">
+                            <div class="flex items-start space-x-6 border border-cyan-600 rounded-2xl p-8">
+                                <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                </div>
                                 <div>
-                                    <h3 class="text-2xl font-bold text-sky-400 mb-1">Web Development Training</h3>
-                                    <p class="text-gray-400 mb-3 font-medium">Solicode, Tangier (Expected 2025)</p>
-                                    <p class="text-gray-300 leading-relaxed">Intensive training in object-oriented programming with a focus on HTML, CSS, JavaScript, SQL, and PHP. Consistently achieved high marks (16/20+) on school projects.</p>
+                                    <h3 class="text-2xl font-bold text-cyan-400 mb-1">Web Development Training</h3>
+                                    <p class="text-gray-400 mb-3 font-medium">Solicode, Tangier - 2025</p>
+                                    <p class="text-gray-400 leading-relaxed">Intensive training in object-oriented programming with a focus on HTML, CSS, JavaScript, SQL, and PHP. Consistently achieved high marks (16/20+) on school projects.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gray-800/50 rounded-xl p-8 border border-gray-800 hover:border-sky-500 transition duration-300">
-                            <div class="flex items-start space-x-6">
-                                <div class="flex-shrink-0 w-16 h-16 bg-sky-500/10 rounded-xl flex items-center justify-center"><svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg></div>
+                        <div class="glass-card rounded-xl p-8 hover:border-purple-500 transition duration-300">
+                            <div class="flex items-start space-x-6 border border-cyan-600 rounded-2xl p-8">
+                                <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg>
+                                </div>
                                 <div>
-                                    <h3 class="text-2xl font-bold text-sky-400 mb-1">Degree in Economics</h3>
+                                    <h3 class="text-2xl font-bold text-purple-400 mb-1">Degree in Economics</h3>
                                     <p class="text-gray-400 mb-3 font-medium">Abdelmalek Essaâdi University, Tangier (2024)</p>
-                                    <p class="text-gray-300 leading-relaxed">Completed foundational studies in economic sciences, developing strong analytical and problem-solving skills.</p>
+                                    <p class="text-gray-400 leading-relaxed">Completed foundational studies in economic sciences, developing strong analytical and problem-solving skills.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-gray-800/50 rounded-xl p-8 border border-gray-800 hover:border-sky-500 transition duration-300">
-                            <div class="flex items-start space-x-6">
-                                <div class="flex-shrink-0 w-16 h-16 bg-sky-500/10 rounded-xl flex items-center justify-center"><svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6"></path></svg></div>
+                        <div class="glass-card rounded-xl p-8 hover:border-green-500 transition duration-300">
+                            <div class="flex items-start space-x-6 border border-cyan-600 rounded-2xl p-8">
+                                <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6"></path></svg>
+                                </div>
                                 <div>
-                                    <h3 class="text-2xl font-bold text-sky-400 mb-1">Baccalaureate in Physical Sciences</h3>
+                                    <h3 class="text-2xl font-bold text-green-400 mb-1">Baccalaureate in Physical Sciences</h3>
                                     <p class="text-gray-400 mb-3 font-medium">Allal El Fassi High School, Tangier (2021)</p>
-                                    <p class="text-gray-300 leading-relaxed">Graduated with a focus on physical sciences, French option.</p>
+                                    <p class="text-gray-400 leading-relaxed">Graduated with a focus on physical sciences, French option.</p>
                                 </div>
                             </div>
                         </div>
@@ -137,24 +228,60 @@
         </section>
 
         <!-- Call to Action -->
-        <section class="py-24 bg-gray-900/50">
+        <section class="py-24 relative overflow-hidden">
+            <div class="absolute inset-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+            </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center bg-gray-800 rounded-2xl p-12 border border-gray-800">
-                    <h2 class="text-4xl font-bold mb-4"><span class="bg-gradient-to-r from-sky-400 to-sky-500 bg-clip-text text-transparent">Let's Work Together</span></h2>
-                    <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">I'm always excited to collaborate on interesting projects. If you have an idea, let's create something amazing together!</p>
-                    <a href="contact.html" class="inline-block px-8 py-3 bg-sky-500 text-white font-semibold rounded-lg shadow-lg hover:bg-sky-600 hover:scale-105 transform transition duration-300">Get In Touch</a>
+                <div class="text-center glass-card rounded-2xl p-12">
+                    <h2 class="text-4xl font-bold mb-4"><span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Let's Work Together</span></h2>
+                    <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">I'm always excited to collaborate on interesting projects. If you have an idea, let's create something amazing together!</p>
+                    <a href="contact.html" class="inline-block px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full shadow-lg hover:shadow-cyan-500/50 hover:scale-105 transform transition duration-300">Get In Touch</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex flex-col md:flex-row justify-between items-center"><div class="text-gray-400 mb-4 md:mb-0">© 2024 Anouar BENYEKHLEF. All rights reserved.</div><div class="flex space-x-6"><a href="#" class="text-gray-400 hover:text-sky-400 transition duration-300" aria-label="GitHub profile"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a><a href="#" class="text-gray-400 hover:text-sky-400 transition duration-300" aria-label="LinkedIn profile"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a></div></div></div>
+    <footer class="border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-gray-400 text-sm">
+                    © 2024 Anouar BENYEKHLEF. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 hover:scale-110 transform" aria-label="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 hover:scale-110 transform" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Mobile Menu -->
-    <div class="md:hidden fixed inset-0 bg-gray-900/95 z-50 hidden" id="mobile-menu"><div class="flex flex-col items-center justify-center h-full space-y-8"><button class="absolute top-6 right-6 text-gray-300 hover:text-sky-400" id="close-mobile-menu-button" aria-label="Close mobile menu"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button><a href="index.html" class="text-gray-300 text-2xl hover:text-sky-400">Home</a><a href="projects.html" class="text-gray-300 text-2xl hover:text-sky-400">Projects</a><a href="#skills" class="text-gray-300 text-2xl hover:text-sky-400" id="mobile-skills-link">Skills</a><a href="about.html" class="text-gray-100 text-2xl font-semibold">About</a><a href="contact.html" class="text-gray-300 text-2xl hover:text-sky-400" id="mobile-contact-link">Contact</a></div></div>
+    <div class="md:hidden fixed inset-0 bg-gray-950/98 backdrop-blur-sm z-50 hidden" id="mobile-menu">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 p-8">
+            <button class="absolute top-6 right-6 text-gray-300 hover:text-cyan-400 transition-colors" id="close-mobile-menu-button">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <a href="index.html" class="text-gray-300 text-2xl hover:text-cyan-400 transition-colors">Home</a>
+            <a href="projects.html" class="text-gray-300 text-2xl hover:text-cyan-400 transition-colors">Projects</a>
+            <a href="about.html#skills" class="text-gray-300 text-2xl hover:text-cyan-400 transition-colors">Skills</a>
+            <a href="about.html" class="text-white text-2xl font-semibold hover:text-cyan-400 transition-colors">About</a>
+            <a href="contact.html" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xl font-semibold rounded-full hover:shadow-lg hover:shadow-cyan-500/50 transition-all">Contact</a>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-gray-950/80', 'backdrop-blur-lg', 'border-b', 'border-white/10', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-gray-950/80', 'backdrop-blur-lg', 'border-b', 'border-white/10', 'shadow-lg');
+            }
+        });
+    </script>
 </body>
 </html>
