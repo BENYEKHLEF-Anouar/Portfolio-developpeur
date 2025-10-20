@@ -1,57 +1,142 @@
 ---
 marp: true
-theme: default
+title: "Portfolio Développeur"
 paginate: true
-title: Developer Portfolio Mini-Site Analysis
-style: |
-  section {
-    background-color: #f5faff;
-    color: #003087;
-  }
-  h1, h2 {
-    color: #003087;
-  }
-  img {
-    max-height: 500px;
-     width: auto; 
-     object-fit: contain;
-  }
+theme: default
+section { 
+  background-color: #ffffff; 
+  color: #000000; 
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+}
+section::before {
+  content: attr(data-slide-number);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #003087;
+}
+h1, h2 { 
+  color: #003087; 
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+ul, ol {
+  font-size: 18px;
+  line-height: 1.5;
+}
+img { 
+  max-height: 400px; 
+  width: auto; 
+  object-fit: contain;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+blockquote {
+  border-left: 4px solid #003087;
+  padding-left: 15px;
+  font-style: italic;
+}
 ---
 
-# Developer Portfolio Mini-Site
-**Mallouli Abdelhay**  
-*Supervised by: M. Essarraj Fouad*  
-*Group: DM101*
+# Portfolio Développeur
+
+**Benykhlef Anouar**  
+Encadré par: **M. Essarraj Fouad**  
+DM101  
 
 ---
 
-## Analysis: Requirements Specification
-- **Context**: Portfolio – Laravel 
-- **Objective**: Profile –  Projects – Contact
-- **For**: Aboumacha Mohamed Amine
-- **Users**: Recruiters – Clients – Students
-- **Pages**: Home – Projects – Details – About
-- **Design**: Clean – Responsive – blue and white for colors
+# Analyse
+
 
 ---
 
-## Analysis: Example of an Inspiring Site
+## Cahier des charges
 
-![Inspiring Site](imgs/image1.png)
+**Contexte du projet**  
+Site portfolio personnel pour présenter :  
+- Compétences  
+- Réalisations  
+- Parcours de **Aziz Soufiane**
+
+**Objectif**  
+Créer une vitrine professionnelle claire.  
+**Profil développeur :** nom, bio, compétences  
+**Contenu :** liste de projets + détails projet  
+Page **À propos / Contact**
 
 ---
 
-## Analysis: Use Case Diagram
-![Use Case Diagram](imgs/image2.png)
+# Cible utilisateur
+
+- Recruteurs  
+- Partenaires  
+- Clients potentiels  
+
+**Périmètre fonctionnel**  
+- Minimum 3 pages :  
+  - Accueil  
+  - Projets / Détail projet  
+  - À propos / Contact
+
 
 ---
 
-## Conception: Schema
+# Étude de l’existant
 
-![Schema](imgs/image3.png)
+## Exemple de site inspirant
+![Image – Exemple de site](images/Capture%20d'écran%202025-10-13%20123115.png)
 
 ---
 
-## Conception: Maquette
+# Diagramme de cas d'utilisation
 
-![Maquette](imgs/image4.png)
+![Image – Diagramme de cas d'utilisation](images/diagram.png)
+
+---
+
+# Conception
+
+
+---
+
+## Design Thinking
+
+![Image – Design Thinking](images/1_33khN9zpFCMWnF8pLqeVTQ.png)
+
+
+---
+
+1. 🟡 **Empathize** — Comprendre les utilisateurs : besoins, émotions, problèmes  
+
+2. 🟣 **Define** — Définir clairement le problème à résoudre  
+
+3. 🟢 **Ideate** — Générer plusieurs idées créatives  
+
+4. 🔵 **Prototype** — Créer des versions simples ou maquettes 
+ 
+5. 🟠 **Test** — Tester les prototypes et apprendre des retours  
+
+---
+
+# Schéma
+
+![Image – Schéma général](images/mermaid-diagram-2025-10-17-160852.png)
+
+---
+
+# Maquette
+
+![Image – Maquette du site](images/screencapture-127-0-0-1-5501-index-html-2025-10-20-15_56_43.png)
+
+---
+
+# Merci
