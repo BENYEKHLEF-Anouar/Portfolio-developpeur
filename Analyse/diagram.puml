@@ -23,5 +23,5 @@ Visitor -- UC_Services
 Visitor -- UC_Contact
 
 ' Optionnel : relations de dépendance/extension
-UC_ProjectDetails .> UC_Projects : <>
+UC_ProjectDetails .> UC_Projects : <<extend>>
 @enduml
