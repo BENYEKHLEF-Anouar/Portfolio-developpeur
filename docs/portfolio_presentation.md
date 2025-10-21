@@ -135,7 +135,7 @@ Page **À propos / Contact**
 
 # Maquette
 
-![Image – Maquette du site](images/screencapture-127-0-0-1-5501-index-html-2025-10-20-15_56_43.png)
+![Image – Maquette du site](images/screencapture-127-0-0-1-5500-Maquettage-index-html-2025-10-21-09_05_12.png)
 
 ---
 
