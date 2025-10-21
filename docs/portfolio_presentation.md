@@ -172,7 +172,7 @@ Page **À propos / Contact**
 # Schéma
 
 <figure>
-  <img src="images/mermaid-diagram-2025-10-21-153737.png" alt="Schéma général du site">
+  <img src="images/mermaid-diagram-2025-10-21-164539.png" alt="Schéma général du site">
   <figcaption>Figure 4 – Schéma général de l’architecture du site</figcaption>
 </figure>
 
