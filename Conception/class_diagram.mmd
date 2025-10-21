@@ -1,73 +1,38 @@
 classDiagram
-    %% ===========================
-    %% Core Entities (Domain Model)
-    %% ===========================
-
     class Developer {
-        +string name
+        +int id
+        +string first_name
+        +string last_name
         +string title
         +string bio
         +string email
+        +string phone
         +string location
-        +list<Skill> skills
-        +list<Project> projects
-        +getProfile() ServiceData
+        +string profile_picture
     }
 
     class Skill {
+        +int id
         +string name
         +string level
         +string category
+        +string icon
     }
 
     class Project {
         +int id
         +string title
         +string description
-        +string technologies
-        +string github_url
         +string image
-        +getDetails() ServiceData
+        +string github_link
+        +string demo_link
+        +string technologies
+        +date start_date
+        +date end_date
+
     }
 
-    %% ===========================
-    %% Services Layer
-    %% ===========================
-    class DeveloperService {
-        +getDeveloperProfile() Developer
-        +getSkills() list<Skill>
-    }
-
-    class ProjectService {
-        +getAllProjects() list<Project>
-        +getProjectById(id: int) Project
-    }
-
-    %% ===========================
-    %% Controllers Layer
-    %% ===========================
-    class HomeController {
-        +index()
-    }
-
-    class ProjectController {
-        +index()
-        +show(id: int)
-    }
-
-    class AboutController {
-        +index()
-    }
-
-    %% ===========================
     %% Relationships
-    %% ===========================
+    Developer "1" --> "many" Project : has
     Developer "1" --> "many" Skill : has
-    Developer "1" --> "many" Project : owns
-
-    DeveloperService --> Developer : provides data
-    ProjectService --> Project : provides data
-
-    HomeController --> DeveloperService : uses
-    ProjectController --> ProjectService : uses
-    AboutController --> DeveloperService : uses
+    Project "many" --> "many" Skill : uses

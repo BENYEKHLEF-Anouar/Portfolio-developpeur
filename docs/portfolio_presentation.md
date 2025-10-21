@@ -139,4 +139,11 @@ Page **À propos / Contact**
 
 ---
 
+
+# Diagramme de classe
+
+![Image – Maquette du site](images/mermaid-diagram-2025-10-21-122830.png)
+
+---
+
 # Merci
