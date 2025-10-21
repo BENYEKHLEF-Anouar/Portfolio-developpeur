@@ -64,6 +64,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Active Navigation Link Styling
+// document.addEventListener('DOMContentLoaded', () => {
+//     const currentPath = window.location.pathname.split('/').pop();
+//     const navLinks = document.querySelectorAll('.nav-link');
+
+//     navLinks.forEach(link => {
+//         const linkPath = link.getAttribute('href');
+//         if (linkPath === currentPath) {
+//             link.classList.add('active');
+//         } else {
+//             link.classList.remove('active');
+//         }
+//     });
+// });
+
+
+// =========================================
+// DYNAMIC ACTIVE NAVIGATION LINK STYLING
+// =========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Get the current page filename (e.g., "about.html")
+    let currentPage = window.location.pathname.split('/').pop();
+
+    // 2. Handle the root case (e.g., if you are just at "/" it should count as "index.html")
+    if (currentPage === '' || currentPage === '/') {
+        currentPage = 'index.html';
+    }
+
+    // 3. Select all navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        // First, remove any 'active' class that might be hardcoded in HTML
+        link.classList.remove('active');
+
+        // Get the link target (e.g., "projects.html")
+        const linkHref = link.getAttribute('href');
+
+        // If the link matches the current page, add the active class
+        if (linkHref === currentPage) {
+            link.classList.add('active');
+        }
+    });
+});
+
 
 // -----------------------------
 // PROJECT DATA
