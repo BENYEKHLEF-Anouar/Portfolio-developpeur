@@ -3,7 +3,6 @@ graph TD
     subgraph NAVBAR [Navbar Navigation]
         A[Home]
         B[About]
-        C[Skills]
         D[Projects]
         E[Contact]
     end
@@ -11,40 +10,29 @@ graph TD
     %% ===== PAGE CONNECTIONS =====
     A -.-> A1[Home Page]
     B -.-> B1[About Page]
-    C -.-> C1[Skills Page]
     D -.-> D1[Projects Page]
-    E -.-> E1[Contact Page]
 
     %% ===== HOME PAGE SECTIONS =====
     subgraph HOME_PAGE [Home Page Sections]
-        A1 --> H1[About Section: Biography / Experience Overview]
-        A1 --> H2[Skills Preview: Technical & Soft Skills]
-        A1 --> H3[CTA: View Projects]
+        A1 -- "Bio/Title" --> H1[About Section: Biography / Title / Info]
+        A1 -- "Featured Projects" --> H3[CTA: View Projects]
         H3 -.-> D1
     end
 
     %% ===== ABOUT PAGE =====
     subgraph ABOUT_PAGE [About Page Details]
-        B1 --> B2[Biography / Experience Details]
-    end
-
-    %% ===== SKILLS PAGE =====
-    subgraph SKILLS_PAGE [Skills Page Details]
-        C1 --> C2[Technical Skills]
-        C1 --> C3[Soft Skills]
+        B1 --> B2[Developer Details: name, bio, profile_picture, journey]
     end
 
     %% ===== PROJECTS PAGE =====
-    subgraph PROJECTS_PAGE [Projects Page Details]
-        D1 --> D2[Project Portfolio + GitHub Links]
-        D1 --> D3[Highlighted Projects]
+    subgraph PROJECTS_PAGE [Projects Page]
+        D1 -- "Click on a project" --> D2[Project Details Page]
     end
 
-    %% ===== CONTACT PAGE =====
-    subgraph CONTACT_PAGE [Contact Page Flow]
-        E1 --> E2[Contact Form]
-        E2 --> E3[Form Submitted]
-        E3 --> E4[Thank You / Success Message]
+    %% ===== PROJECT DETAILS PAGE =====
+    subgraph PROJECT_DETAILS [Project Details Page]
+        D2 -- "Displays" --> PD1[Project Info: title, description, image, github_link, demo_link, start_date, end_date]
+        D2 -- "Displays" --> PD2[Used Technologies]
     end
 
-
+    

@@ -1,4 +1,6 @@
 classDiagram
+    direction LR
+
     class Developer {
         +int id
         +string first_name
@@ -7,16 +9,7 @@ classDiagram
         +string bio
         +string email
         +string phone
-        +string location
         +string profile_picture
-    }
-
-    class Skill {
-        +int id
-        +string name
-        +string level
-        +string category
-        +string icon
     }
 
     class Project {
@@ -26,13 +19,15 @@ classDiagram
         +string image
         +string github_link
         +string demo_link
-        +string technologies
         +date start_date
         +date end_date
+    }
 
+    class Technologies {
+        +int id
+        +string name
     }
 
     %% Relationships
-    Developer "1" --> "many" Project : has
-    Developer "1" --> "many" Skill : has
-    Project "many" --> "many" Skill : uses
+    Developer "1" --> "*" Project : has
+    Project "1" --> "*" Technologies : uses
