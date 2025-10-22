@@ -122,6 +122,8 @@ const projects = [
     image: "assets/parkfeecalculator.jpg", // Add your image here
     github: "https://github.com/yourusername/ParkFeeCalculator",
     live: null,
+    startDate: "2023-01",
+    endDate: "2023-03",
   },
   {
     id: "mentora",
@@ -131,8 +133,64 @@ const projects = [
     image: "assets/mentora.jpg", // Add your image here
     github: "https://github.com/yourusername/Mentora",
     live: "https://yourdomain.com/mentora",
+    startDate: "2023-04",
+    endDate: "2023-06",
   },
-  // Existing projects here...
+  {
+    id: "solirestaurant",
+    title: "SoliRestaurant - Restaurant Management",
+    description: "A full-stack web application for restaurant management, featuring a responsive front-end for customer orders and a back-end for menu and order administration.",
+    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "GitHub"],
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1974&auto=format&fit=crop",
+    github: "https://github.com/yourusername/SoliRestaurant",
+    live: null,
+    startDate: "2023-07",
+    endDate: "2023-09",
+  },
+  {
+    id: "farhaevents",
+    title: "FarhaEvents - Event Registration System",
+    description: "A web-based system for event registration, allowing users to sign up and download tickets. Includes an admin panel for managing events and reservations.",
+    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "GitHub"],
+    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2070&auto=format&fit=crop",
+    github: "https://github.com/yourusername/FarhaEvents",
+    live: null,
+    startDate: "2023-10",
+    endDate: "2023-12",
+  },
+  {
+    id: "ecommerce",
+    title: "E-commerce Platform",
+    description: "A full-featured e-commerce platform with product listings, shopping cart functionality, and secure payment processing.",
+    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "GitHub"],
+    image: "https://images.unsplash.com/photo-1483985988355-cdf945701608?q=80&w=2070&auto=format&fit=crop",
+    github: "https://github.com/yourusername/EcommercePlatform",
+    live: null,
+    startDate: "2024-01",
+    endDate: "2024-03",
+  },
+  {
+    id: "taskmanagement",
+    title: "Task Management App",
+    description: "A web application designed for efficient task management, allowing users to create, assign, and track tasks with ease.",
+    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "GitHub"],
+    image: "https://images.unsplash.com/photo-1504711432028-ee67912760c2?q=80&w=2070&auto=format&fit=crop",
+    github: "https://github.com/yourusername/TaskManagementApp",
+    live: null,
+    startDate: "2024-04",
+    endDate: "2024-06",
+  },
+  {
+    id: "blogplatform",
+    title: "Blog Platform",
+    description: "A dynamic blog platform enabling users to create, publish, and manage their articles with a user-friendly interface.",
+    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "GitHub"],
+    image: "https://images.unsplash.com/photo-1499750310107-5fcd61f20284?q=80&w=2070&auto=format&fit=crop",
+    github: "https://github.com/yourusername/BlogPlatform",
+    live: null,
+    startDate: "2024-07",
+    endDate: "2024-09",
+  },
 ];
 
 // -----------------------------
@@ -178,6 +236,9 @@ if (projectDetailsContainer) {
       <p>${project.description}</p>
       <h3>Technologies Used:</h3>
       <ul>${project.technologies.map(t => `<li>${t}</li>`).join("")}</ul>
+      <p class="text-gray-400 text-sm mt-4">
+        <span class="font-semibold">Duration:</span> ${project.startDate} - ${project.endDate}
+      </p>
       <div class="links">
         ${project.github ? `<a href="${project.github}" target="_blank">View on GitHub</a>` : ""}
         ${project.live ? `<a href="${project.live}" target="_blank">Live Demo</a>` : ""}
