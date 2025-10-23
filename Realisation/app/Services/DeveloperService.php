@@ -14,7 +14,7 @@ class DeveloperService
             'bio' => 'Passionate about building scalable and user-friendly web applications.',
             'email' => 'anouarbenyekhlef669@example.com',
             'phone' => '+212771300601',
-            'profile_picture' => '/images/profile.jpg',
+            'profile_picture' => '/public/images/profile.webp',
         ];
     }
 }
