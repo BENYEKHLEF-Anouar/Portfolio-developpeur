@@ -1,0 +1,322 @@
+        /* --------- Home ---------- */
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 8s ease infinite;
+        }
+
+        .stagger-1 {
+            animation-delay: 0.1s;
+        }
+
+        .stagger-2 {
+            animation-delay: 0.2s;
+        }
+
+        .stagger-3 {
+            animation-delay: 0.3s;
+        }
+
+        .stagger-4 {
+            animation-delay: 0.4s;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #0ea5e9, #06b6d4);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tech-icon {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tech-icon:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+
+
+        /* --------- About ---------- */
+
+        .skill-tag {
+            transition: all 0.2s ease-in-out;
+        }
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .tech-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 0.8rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.25rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .tech-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .tag-html {
+            background: linear-gradient(135deg, rgba(227, 76, 38, 0.2), rgba(241, 101, 41, 0.2));
+            border: 1px solid rgba(241, 101, 41, 0.3);
+            color: #fdbA74;
+        }
+
+        .tag-css {
+            background: linear-gradient(135deg, rgba(38, 77, 228, 0.2), rgba(21, 114, 182, 0.2));
+            border: 1px solid rgba(21, 114, 182, 0.3);
+            color: #93c5fd;
+        }
+
+        .tag-js {
+            background: linear-gradient(135deg, rgba(240, 219, 79, 0.2), rgba(247, 223, 30, 0.2));
+            border: 1px solid rgba(247, 223, 30, 0.3);
+            color: #fde047;
+        }
+
+        .tag-php {
+            background: linear-gradient(135deg, rgba(119, 123, 179, 0.2), rgba(139, 147, 192, 0.2));
+            border: 1px solid rgba(139, 147, 192, 0.3);
+            color: #c4b5fd;
+        }
+
+        .tag-laravel {
+            background: linear-gradient(135deg, rgba(255, 45, 32, 0.2), rgba(249, 102, 94, 0.2));
+            border: 1px solid rgba(255, 45, 32, 0.3);
+            color: #fca5a5;
+        }
+
+        .tag-mysql {
+            background: linear-gradient(135deg, rgba(0, 117, 192, 0.2), rgba(228, 161, 62, 0.2));
+            border: 1px solid rgba(0, 117, 192, 0.3);
+            color: #67e8f9;
+        }
+
+        .tag-sql {
+            background: linear-gradient(135deg, rgba(0, 117, 192, 0.2), rgba(228, 161, 62, 0.2));
+            border: 1px solid rgba(0, 117, 192, 0.3);
+            color: #67e8f9;
+        }
+
+        .tag-python {
+            background: linear-gradient(135deg, rgba(55, 117, 160, 0.2), rgba(255, 213, 79, 0.2));
+            border: 1px solid rgba(55, 117, 160, 0.3);
+            color: #ffeb3b;
+        }
+
+        .tag-react {
+            background: linear-gradient(135deg, rgba(97, 218, 251, 0.2), rgba(61, 133, 198, 0.2));
+            border: 1px solid rgba(97, 218, 251, 0.3);
+            color: #7dd3fc;
+        }
+
+        .tag-tailwind-css {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.2));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: #7dd3fc;
+        }
+
+        .tag-vite {
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.2), rgba(255, 153, 0, 0.2));
+            border: 1px solid rgba(255, 204, 0, 0.3);
+            color: #ffe066;
+        }
+
+        .tag-supabase {
+            background: linear-gradient(135deg, rgba(52, 211, 153, 0.2), rgba(16, 185, 129, 0.2));
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            color: #6ee7b7;
+        }
+
+        .tag-gemini-ai {
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.2), rgba(255, 0, 255, 0.2));
+            border: 1px solid rgba(255, 105, 180, 0.3);
+            color: #ff69b4;
+        }
+
+        .tag-bootstrap {
+            background: linear-gradient(135deg, rgba(111, 66, 193, 0.2), rgba(130, 80, 200, 0.2));
+            border: 1px solid rgba(111, 66, 193, 0.3);
+            color: #d8b4fe;
+        }
+
+        .tag-git {
+            background: linear-gradient(135deg, rgba(240, 80, 50, 0.2), rgba(221, 68, 43, 0.2));
+            border: 1px solid rgba(240, 80, 50, 0.3);
+            color: #fdba74;
+        }
+
+        .tag-figma {
+            background: linear-gradient(135deg, rgba(162, 89, 255, 0.2), rgba(242, 78, 62, 0.2));
+            border: 1px solid rgba(162, 89, 255, 0.3);
+            color: #f9a8d4;
+        }
+
+        .tag-generic {
+            background: linear-gradient(135deg, rgba(107, 114, 128, 0.2), rgba(75, 85, 99, 0.2));
+            border: 1px solid rgba(107, 114, 128, 0.3);
+            color: #d1d5db;
+        }
+        .stat-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        .stat-card:hover::before {
+            left: 100%;
+        }
+
+        /* --------- Project Detail ---------- */
+
+        .skill-tag {
+            transition: all 0.2s ease-in-out;
+        }
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .tag-html {
+            background: linear-gradient(135deg, rgba(227, 76, 38, 0.2), rgba(241, 101, 41, 0.2));
+            border: 1px solid rgba(241, 101, 41, 0.3);
+            color: #fdbA74;
+        }
+        .tag-css {
+            background: linear-gradient(135deg, rgba(38, 77, 228, 0.2), rgba(21, 114, 182, 0.2));
+            border: 1px solid rgba(21, 114, 182, 0.3);
+            color: #93c5fd;
+        }
+        .tag-js {
+            background: linear-gradient(135deg, rgba(240, 219, 79, 0.2), rgba(247, 223, 30, 0.2));
+            border: 1px solid rgba(247, 223, 30, 0.3);
+            color: #fde047;
+        }
+        .tag-php {
+            background: linear-gradient(135deg, rgba(119, 123, 179, 0.2), rgba(139, 147, 192, 0.2));
+            border: 1px solid rgba(139, 147, 192, 0.3);
+            color: #c4b5fd;
+        }
+        .tag-sql {
+            background: linear-gradient(135deg, rgba(0, 117, 192, 0.2), rgba(228, 161, 62, 0.2));
+            border: 1px solid rgba(0, 117, 192, 0.3);
+            color: #67e8f9;
+        }
+        .tag-laravel {
+            background: linear-gradient(135deg, rgba(255, 45, 32, 0.2), rgba(249, 102, 94, 0.2));
+            border: 1px solid rgba(255, 45, 32, 0.3);
+            color: #fca5a5;
+        }
+        .tag-react {
+            background: linear-gradient(135deg, rgba(97, 218, 251, 0.2), rgba(61, 133, 198, 0.2));
+            border: 1px solid rgba(97, 218, 251, 0.3);
+            color: #7dd3fc;
+        }
+        .tag-tailwind {
+             background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.2));
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: #7dd3fc;
+        }
+        .tag-bootstrap {
+            background: linear-gradient(135deg, rgba(111, 66, 193, 0.2), rgba(130, 80, 200, 0.2));
+            border: 1px solid rgba(111, 66, 193, 0.3);
+            color: #d8b4fe;
+        }
+        .tag-git {
+            background: linear-gradient(135deg, rgba(240, 80, 50, 0.2), rgba(221, 68, 43, 0.2));
+            border: 1px solid rgba(240, 80, 50, 0.3);
+            color: #fdba74;
+        }
+        .tag-figma {
+            background: linear-gradient(135deg, rgba(162, 89, 255, 0.2), rgba(242, 78, 62, 0.2));
+            border: 1px solid rgba(162, 89, 255, 0.3);
+            color: #f9a8d4;
+        }
+        .tag-generic {
+            background: linear-gradient(135deg, rgba(107, 114, 128, 0.2), rgba(75, 85, 99, 0.2));
+            border: 1px solid rgba(107, 114, 128, 0.3);
+            color: #d1d5db;
+        }

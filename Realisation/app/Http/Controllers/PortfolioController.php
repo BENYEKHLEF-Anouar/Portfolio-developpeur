@@ -37,13 +37,20 @@ class PortfolioController extends Controller
 
     public function projects()
     {
+        $developer = $this->developerService->getDeveloper();
         $projects = $this->projectService->getProjects();
-        return view('projects', compact('projects'));
+        return view('projects', compact('developer', 'projects'));
     }
 
     public function projectDetails($id)
     {
+        $developer = $this->developerService->getDeveloper();
         $project = $this->projectService->getProjectById($id);
-        return view('project-details', compact('project'));
+
+        if (!$project) {
+            abort(404); // Or redirect to a projects list with an error
+        }
+
+        return view('project-details', compact('developer', 'project'));
     }
 }
