@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $developer['first_name'] }} - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+    <link href="{{ asset('resources/css/style.css') }}" rel="stylesheet">
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-    <div class="container">
-        <a class="navbar-brand" href="{{ route('home') }}">My Portfolio</a>
-        <div>
-            <a href="{{ route('home') }}" class="nav-link d-inline text-white">Home</a>
-            <a href="{{ route('about') }}" class="nav-link d-inline text-white">About</a>
-            <a href="{{ route('projects') }}" class="nav-link d-inline text-white">Projects</a>
-        </div>
-    </div>
-</nav>
+<body class="bg-gray-900 text-gray-100">
+    @include('partials.nav')
 
-@yield('content')
+    <main class="pt-16">
+        @yield('content')
+    </main>
 
+    @include('partials.footer')
 </body>
 </html>
