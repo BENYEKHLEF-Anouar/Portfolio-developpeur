@@ -73,9 +73,7 @@ class ProjectService
 
         foreach ($projects as &$project) {
             $project['technologies'] = $this->technologyService->getByIds($project['technologies']);
-        }
-
-         
+        }         
         // iterating by reference, not by value
 
         return $projects;
@@ -83,6 +81,7 @@ class ProjectService
 
     public function getProjectById($id)
     {
+
         $projects = $this->getProjects();                 // This will now return hydrated projects
         foreach ($projects as $project) {
             if ($project['id'] == $id) {
