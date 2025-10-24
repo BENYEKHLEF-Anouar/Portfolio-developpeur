@@ -48,7 +48,12 @@ class PortfolioController extends Controller
         $project = $this->projectService->getProjectById($id);
 
         if (!$project) {
-            abort(404); // Or redirect to a projects list with an error
+            abort(404); 
+        }
+
+        // Hydrate technologies for the project details view
+        if (isset($project['technologies']) && is_array($project['technologies']) && !empty($project['technologies']) && is_int($project['technologies'][array_key_first($project['technologies'])])) {
+            $project['technologies'] = $this->technologyService->getByIds($project['technologies']);
         }
 
         return view('project-details', compact('developer', 'project'));
