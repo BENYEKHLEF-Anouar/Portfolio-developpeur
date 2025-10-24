@@ -18,7 +18,6 @@ class TechnologyService
             ['id' => 9, 'name' => 'Tailwind CSS'],
             ['id' => 10, 'name' => 'Vite'],
             ['id' => 11, 'name' => 'Supabase'],
-            ['id' => 12, 'name' => 'Gemini AI'],
         ];
     }
 
