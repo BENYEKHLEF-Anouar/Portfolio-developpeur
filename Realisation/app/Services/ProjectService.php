@@ -13,7 +13,7 @@ class ProjectService
 
     public function getProjects()
     {
-        return [
+        $projects = [
             [
                 'id' => 1,
                 'title' => 'WalletHub – Budget Management Web Application',
@@ -67,17 +67,22 @@ class ProjectService
                 'demo_link' => '',
                 'start_date' => '2024-03-01',
                 'end_date' => '2024-05-30',
-                'technologies' => [3, 8, 9, 10, 11, 12],
+                'technologies' => [3, 8, 9, 10, 11],
             ]
         ];
+
+        foreach ($projects as &$project) {
+            $project['technologies'] = $this->technologyService->getByIds($project['technologies']);
+        }
+
+        return $projects;
     }
 
     public function getProjectById($id)
     {
-        $projects = $this->getProjects();
+        $projects = $this->getProjects(); // This will now return hydrated projects
         foreach ($projects as $project) {
             if ($project['id'] == $id) {
-                $project['technologies'] = $this->technologyService->getByIds($project['technologies']);
                 return $project;
             }
         }

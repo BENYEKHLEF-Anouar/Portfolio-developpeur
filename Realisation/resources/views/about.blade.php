@@ -36,7 +36,7 @@
         </div>
 
         <!-- Developer Stats -->
-        <div class="mb-24">
+        <!-- <div class="mb-24">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold"><span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">By The Numbers</span></h2>
                 <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">A snapshot of my development journey and achievements.</p>
@@ -59,10 +59,10 @@
                     <div class="text-gray-400 text-sm uppercase tracking-wider">Average Project Score</div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Development Approach -->
-        <div class="mb-24">
+        <!-- <div class="mb-24">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold"><span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">My Development Philosophy</span></h2>
                 <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">The principles that guide my work and shape every project I build.</p>
@@ -96,7 +96,7 @@
                     <p class="text-gray-400 leading-relaxed">Optimizing every aspect of the application for speed and efficiency. Fast-loading, responsive applications create better experiences for everyone.</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Quote Section -->
         <div class="mb-24">
